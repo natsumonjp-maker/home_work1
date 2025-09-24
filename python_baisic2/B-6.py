@@ -5,7 +5,12 @@ N = int(input("サイコロの面数を入力してください（例: 6）: "))
 M = int(input("振る回数を入力してください（例: 10）: "))
 
 # M回サイコロを振る
-# 結果が[6, 6, 8, 5, 1, 6, 4, 4, 3, 4, 7, 5, 7, 1, 4, 2, 5, 7, 1, 7]となる.固定
-results = [6, 6, 8, 5, 1, 6, 4, 4, 3, 4, 7, 5, 7, 1, 4, 2, 5, 7, 1, 7]
-print(results)
+results = [random.randint(1, N) for _ in range(M)]
+
+# 結果を表示（カンマ区切りで[]内に）
+print("[", end="")
+print(", ".join(str(num) for num in results), end="")
+print("]")
+
+
 
