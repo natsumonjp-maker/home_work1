@@ -8,9 +8,4 @@ M = int(input("振る回数を入力してください（例: 10）: "))
 results = [random.randint(1, N) for _ in range(M)]
 
 # 結果を表示（カンマ区切りで[]内に）
-print("[", end="")
-print(", ".join(str(num) for num in results), end="")
-print("]")
-
-
-
+print(results)
